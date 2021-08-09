@@ -23,7 +23,10 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.sayem.RanimatedP6",
+      "jsEngine":"hermes"
+      
     },
     "web": {
       "favicon": "./assets/favicon.png"
