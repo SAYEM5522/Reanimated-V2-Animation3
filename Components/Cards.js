@@ -18,17 +18,22 @@ const Cards = ({item,index}) => {
     onActive: (event, ctx) => {
       x.value = ctx.startX + event.translationX;
       y.value = ctx.startY + event.translationY;
+    
 
     },
     onEnd: (_) => {
-      x.value = withSpring(0);
+      if(x.value<-40){
+        x.value=withSpring(-430)
+      }
+      if(x.value>40){
+        x.value=withSpring(430)
+      }
       y.value = withSpring(0);
 
     },
   });
   const animatedStyle = useAnimatedStyle(() => {
-    const inputRange=[-ImageWidth / 2, 0, ImageWidth / 2];
-    const outputRange= ["45deg"];
+ 
     return {
       transform: [
         {
@@ -38,30 +43,25 @@ const Cards = ({item,index}) => {
           translateY: y.value,
         },
         {
-          rotateZ: (index%2==0)?"0deg":"30deg"
+          rotate: (index%2==0)?`${(index*20)}deg`:"-30deg"
         },
         
       ],
     };
   });
 
- 
   return (
     <PanGestureHandler
         onGestureEvent={gestureHandler}
      >
         <Animated.View
-       
-        style={[styles.container,animatedStyle,]}
+        style={[styles.container,animatedStyle]}
       >
-
         <Image
           key={item.id}
           style={styles.image}
           source={{uri:item.image}}
         />
-    
-
       </Animated.View>
       </PanGestureHandler>
   )
@@ -71,7 +71,7 @@ export default Cards
 
 const styles = StyleSheet.create({
   container:{
-    top:100,
+    top:170,
     left:50,
     height: ImageHeight,
     width: ImageWidth,
@@ -84,6 +84,5 @@ const styles = StyleSheet.create({
     height: null,
     width: null,
     resizeMode: "contain",
-    // borderRadius: 20
   }
 })
