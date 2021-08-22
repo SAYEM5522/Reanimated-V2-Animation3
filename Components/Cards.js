@@ -43,7 +43,7 @@ const Cards = ({item,index}) => {
           translateY: y.value,
         },
         {
-          rotate: (index%2==0)?`${(index*20)}deg`:"-30deg"
+          rotate: (index%2==0)?`${(index*14)}deg`:"-30deg"
         },
         
       ],
@@ -71,7 +71,7 @@ export default Cards
 
 const styles = StyleSheet.create({
   container:{
-    top:170,
+    top:-550,
     left:50,
     height: ImageHeight,
     width: ImageWidth,

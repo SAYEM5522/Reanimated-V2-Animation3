@@ -18,7 +18,8 @@ export default function App() {
       <Tab.Navigator 
       
         screenOptions= {{
-       tabBarShowLabel:false
+       tabBarShowLabel:false,
+        tabBarActiveBackgroundColor:'white'
         }}
       >
         <Tab.Screen
