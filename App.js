@@ -20,14 +20,12 @@ const item=[{
 }]
 export default function App() {
   return (
-    <View style={{ flex: 1 }}>
-        <View style={{ height: 60,backgroundColor:'gray' }}>
-        </View>
+    <View style={{ flex: 1,backgroundColor:'black' }}>
+ 
         <View style={{ flex: 1 }}>
           <StackImage/>
         </View>
-        <View style={{ height: 60,backgroundColor:'red'  }}>
-        </View>
+  
       </View>
   );
 }
