@@ -8,7 +8,7 @@ const HomeScreen = () => {
     <View style={{ flex: 1 }}>
       <View style={styles.container}></View>
       <LinearGradient
-        colors={['rgba(0,0,0,0.98)','rgba(250,250,250,260)', ]}
+        colors={['rgba(0,0,0,0.98)','rgba(250,250,250,250)', ]}
         style={styles.background}/>
         <View style={{ flex: 1 }}>
           <StackImage/>

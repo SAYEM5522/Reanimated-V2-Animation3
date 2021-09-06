@@ -19,7 +19,12 @@ export default function App() {
       
         screenOptions= {{
        tabBarShowLabel:false,
-        tabBarActiveBackgroundColor:'white'
+        tabBarStyle:{
+          position:'absolute',
+          borderTopColor:"white",
+          elevation:0,
+          borderTopWidth:0
+        }
         }}
       >
         <Tab.Screen
