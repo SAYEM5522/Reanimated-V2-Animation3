@@ -1,8 +1,9 @@
 import { LinearGradient } from 'expo-linear-gradient'
 import React from 'react'
-import { StatusBar, StyleSheet, Text, View } from 'react-native'
+import { StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
 import StackImage from '../Components/StackImage'
 import { FontAwesome5 } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 const HomeScreen = () => {
   return (
     <View style={{ flex: 1 }}>
@@ -12,6 +13,10 @@ const HomeScreen = () => {
         <View style={styles.view2}/>
         <Text style={styles.HeaderText}>Magaz</Text>
         <FontAwesome5 name="minus-square" style={styles.HeaderIcon} size={30} color="white" />
+        <View style={styles.SearBar}>
+        <AntDesign name="search1" style={styles.SearchIcon} size={24} color="white" />
+          <TextInput/>
+        </View>
       </View>
       <LinearGradient
         colors={['rgba(0,0,0,0.98)','rgba(250,250,250,250)', ]}
@@ -44,19 +49,19 @@ HeaderText:{
   fontSize:35,
   color:'white',
   fontWeight:'bold',
-  top:-30
+  top:-36
 },
 view1:{
   width:23,
   height:23,
   borderRadius:12,
   backgroundColor:"#d94545",
-  top:26,
+  top:20,
   left:30
 },
 view2:{
   width:23,
-  top:14,
+  top:8,
   height:23,
   borderRadius:12,
   backgroundColor:"#5cedd0",
@@ -64,7 +69,20 @@ view2:{
 },
 HeaderIcon:{
   left:360,
-  top:-60,
+  top:-66,
   
+},
+SearBar:{
+  height:46,
+  width:360,
+  backgroundColor:'#1c1c1c',
+  left:30,
+  top:-54,
+  borderRadius:30,
+  
+},
+SearchIcon:{
+  top:10,
+  left:17
 }
 })

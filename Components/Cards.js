@@ -71,7 +71,7 @@ export default Cards
 
 const styles = StyleSheet.create({
   container:{
-    top:-550,
+    top:-530,
     left:50,
     height: ImageHeight,
     width: ImageWidth,
